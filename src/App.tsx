@@ -7,26 +7,27 @@ import Register from './Components/Register/Register'
 import Appointments from './Components/Appoinments/Appoinments'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Components/Home/Home'
+import CreateAppointment from './Components/Appoinments/CreateAppoinment'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <Router>
-    <div className="App">
-      <Navbar />
-      <div className="pt-16">
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/appointments" element={<Appointments />} />
-        {/* <Route path="/create-appointment" element={<CreateAppointment />} /> */}
-      </Routes>
+      <div className="App">
+        <Navbar />
+        <div className="pt-16">
+          <Routes>
+            <Route path="/" element={<Users />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/appointments" element={<Appointments />} />
+            <Route path="/create-appointment" element={<CreateAppointment />} />
+          </Routes>
+        </div>
       </div>
-    </div>
-  </Router>
+    </Router>
   )
 }
 
